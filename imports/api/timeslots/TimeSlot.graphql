@@ -1,0 +1,16 @@
+type Timeslot {
+  _id: String!
+  createdAt: String
+  teacherId: String
+  studentId: String
+  student: User
+}
+
+type Mutation {
+  createQuestion(name: String!, content: String!): Question
+}
+
+type Query {
+  questions: [Question]
+  question(id: String!): Question
+}
